@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Source+Code+Pro:wght@300&display=swap');
+
+
+:root {
+    --primary-color: rgb(20, 6, 71);
+}
+
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: 'Amatic SC', cursive;
+    line-height: 1.5;
+}
+
+
+a {
+    text-decoration: none;
+    color: var(--primary-color);
+}
+
+
+.content {
+        font-family: 'Source Code Pro', monospace;
+        color: whitesmoke;
+        line-height: 1.5; 
+        z-index: 10;
+}
+
+
+h1{
+    font-weight: 800;
+    font-size: 72px;
+}
+
+
+h2 {
+    font-weight: 700;
+    font-size: 56px;
+}
+
+
+.showcase {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 0 20px;
+    z-index: -2;
+}
+
+
+.video-container video {
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+
+
+.video-container:after {
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.2);
+}
+
+
+#burger {
+   
+    font-size: 64px;
+    color: whitesmoke;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10;
+}
+
+
+#unfoldicon {
+    display: flex;
+    font-size: 54px;
+    color: whitesmoke;
+    right: 50%;
+    left: 50%;
+    bottom: 0;
+    position: fixed;
+    cursor: pointer;
+    z-index: 10; 
+}
+
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: var(--primary-color) no-repeat center center/cover;
+    filter: brightness(70%);
+}
+
+
+#foot {
+    color:whitesmoke;
+    position: fixed;
+    overflow: hidden;
+    bottom: 0;
+    right: 0;
+    font-size: 12px;
+}
+
+@media (max-width: 541px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    #foot {
+        font-size: 7px;
+        overflow: hidden;
+        opacity: 50%;
+        
+    }
+}
+@media (max-height: 700px) {
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 16px;
+    }
+
+    #foot {
+        font-size: 10px;
+        overflow: hidden;
+        opacity: 50%;
+    }
+}
